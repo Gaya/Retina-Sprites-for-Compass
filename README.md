@@ -61,3 +61,38 @@ CSS:
 	}
 }
 ```
+
+##Bonus: retina background-images
+
+With the same principles of the sprites I created a mixin that sets the background-image and it's retina version.
+
+##How to use:
+
+1. Include the mixin in your SASS/SCSS file using:<br/>
+`@import "_retina-background-image.scss";`
+
+2. Put a pixel-ratio 1 version and a retina version anywhere in your images folder.
+
+3. Apply the style using: `@include background-retina(<filename.png>, <filename-retina.png>);`
+
+The following code will generate:
+
+SCSS:
+```scss
+.background {
+	@include background-retina("background.gif", "background-2x.gif");
+}
+```
+
+CSS:
+```
+.background {
+	background-image: url('../images/background.gif');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 2) {
+	.background {
+		background-image: url('../images/background-2x.gif');
+		background-size: 25px 25px;
+	}
+}
+```
