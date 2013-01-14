@@ -15,7 +15,7 @@ Since we have to develop sites that serve retina images and background-images ou
 First thing you'll need to do is to download the mixins and put them where your scss / sass files are located. Notice the underscore at the start of the filenames, this will prevent Compass from compiling these files to CSS.
 
 1. Include the mixin in your SASS/SCSS file using:<br/>
-`@import "_retina-sprites.scss";`
+`@import "retina-sprites";`
 
 2. Create two folders in your images folder of your Compass project. By default there are `icons` and `icons-2x`.
 
@@ -69,7 +69,7 @@ With the same principles of the sprites I created a mixin that sets the backgrou
 ##How to use:
 
 1. Include the mixin in your SASS/SCSS file using:<br/>
-`@import "_retina-background-image.scss";`
+`@import "retina-background-image";`
 
 2. Put a pixel-ratio 1 version and a retina version anywhere in your images folder.
 
