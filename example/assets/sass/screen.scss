@@ -1,0 +1,9 @@
+@import "compass/reset";
+@import "compass/css3";
+
+@import "partials/_retina-sprites.scss";
+
+body {
+	color: #000;
+	background-color: #fff;
+}
