@@ -42,7 +42,7 @@ p {
 .background {
     width: 100%;
     height: 200px;
-    @include background-image-retina("background.gif", "background-2x.gif");
+    @include background-retina("background.gif", "background-2x.gif");
     margin: 10px 0px;
     clear: both;
 }
