@@ -25,6 +25,10 @@ First thing you'll need to do is to download the mixins and put them where your 
 
 It's really that easy!
 
+##Or with Bower
+
+`bower install Retina-sprites-for-Compass`
+
 ##What it does:
 
 Compass will create a nice sprite image from the images you put in the folders. Make sure you only use PNG files for the best result.
