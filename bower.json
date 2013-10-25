@@ -1,0 +1,27 @@
+{
+  "name": "Retina-sprites-for-Compass",
+  "version": "1.0",
+  "homepage": "http://www.gayadesign.com/diy/retina-sprites-for-compass/",
+  "authors": [
+    "Gaya Kessler <gaya.kessler@gmail.com>"
+  ],
+  "description": "Allows you to use sprites in Compass with added retina variants. Works just like the normal sprite helpers, but has been made a lot easier with these mixins.",
+  "main": "src/_retina-sprites.scss",
+  "keywords": [
+    "Compass",
+    "SASS",
+    "Retina",
+    "Sprite",
+    "Sprites",
+    "SCSS",
+    "gayadesign"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
