@@ -9,8 +9,7 @@ fonts_dir = "fonts"
 javascripts_dir = "javascripts"
 
 # You can select your preferred output style here (can be overridden via the command line):
-output_style = :compact
-# Na dev :compressed
+output_style = :expanded
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
@@ -18,6 +17,4 @@ line_comments = false
 # Obviously
 preferred_syntax = :scss
 
-line_comments = false # by Compass.app 
-sass_options = {:debug_info=>false} # by Compass.app 
-output_style = :compressed # by Compass.app 
+line_comments = false

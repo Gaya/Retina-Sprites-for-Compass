@@ -1,7 +1,7 @@
 /*
  * Retina Backgrounds for Compass
  * by:              Gaya Kessler
- * last update:     10/25/13
+ * last update:     03/11/14
  *
  * Usage:
  * 1. create background image for pixel ratio 1 screens and put it somewhere in your images folder.
@@ -9,11 +9,16 @@
  * 3. include the background-image property in your Sass/Scss using: '@include background-retina(<ratio-1-imagefile>, <ratio-2-imagefile>)'
  */
 
-@mixin background-retina($normal, $retina) {
+@mixin background-retina($normal, $retina, $contain: false) {
     background-image: image-url($normal);
 
-    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
         background-image: image-url($retina);
-        background-size: (image-width($retina) / 2) (image-height($retina) / 2);
+
+        @if $contain == true {
+            background-size: contain;
+        } @else {
+            background-size: (image-width($retina) / 2) (image-height($retina) / 2);
+        }
     }
 }

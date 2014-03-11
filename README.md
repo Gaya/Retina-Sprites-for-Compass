@@ -55,7 +55,7 @@ CSS:
 	height: 25px;
 	width: 25px;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 2) {
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
 	.sprite2 {
 		background-image: url('../images/icons-2x-s93dce01c9d.png');
 		background-position: 0 -25px;
@@ -93,7 +93,7 @@ CSS:
 .background {
 	background-image: url('../images/background.gif');
 }
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 2) {
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
 	.background {
 		background-image: url('../images/background-2x.gif');
 		background-size: 25px 25px;
