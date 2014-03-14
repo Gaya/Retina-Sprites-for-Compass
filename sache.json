@@ -1,0 +1,5 @@
+{
+    "name": "Retina-sprites-for-Compass",
+    "description": "Allows you to use sprites in Compass with added retina variants. Works just like the normal sprite helpers, but has been made a lot easier with these mixins.",
+    "tags": ["sprites", "retina", "compass", "sprite", "images", "image-maps", "image-map", "sprite-map", "media-query", "mediaquery", "media query"]
+}
