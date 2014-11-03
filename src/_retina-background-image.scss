@@ -12,7 +12,7 @@
 @mixin background-retina($normal, $retina, $contain: false) {
     background-image: image-url($normal);
 
-    @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
         background-image: image-url($retina);
 
         @if $contain == true {
