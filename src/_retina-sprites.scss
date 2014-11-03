@@ -25,7 +25,7 @@ $icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
     height: image-height(sprite-file($icons, $sprite));
     width: image-width(sprite-file($icons, $sprite));
 
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
         background-image: sprite-url($icons-2x);
         background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
         background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
