@@ -21,7 +21,7 @@ p {
     padding: 10px 0px;
 }
 
-.sprite1, .sprite2, .sprite3 {
+.sprite1, .sprite2, .sprite3, .sprite4 {
     margin: 10px 0px;
     float: left;
     margin-right: 20px;
@@ -37,6 +37,10 @@ p {
 
 .sprite3 {
     @include use-sprite("sprite3");
+}
+
+.sprite4 {
+    @include use-sprite("sprite4", 0.7);
 }
 
 .background {

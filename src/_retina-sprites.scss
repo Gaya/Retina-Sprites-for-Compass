@@ -15,21 +15,33 @@
 $icons: sprite-map("icons/*.png", $layout: smart);
 $icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
 
-//Sprite mixin, works perfectly with standard defines
-@mixin use-sprite($sprite) {
-    background-image: sprite-url($icons);
-    background-position: sprite-position($icons, $sprite);
+@mixin __use-sprite($map, $sprite, $scale: 1, $dpi: 1) {
+    $map_url: sprite-url($map);
+    $map_path: sprite_path($map);
+    $map_width: (image-width($map_path) * $scale);
+    $map_height: (image-height($map_path) * $scale);
+    $sprite_x: (nth(sprite-position($map, $sprite), 1) * $scale);
+    $sprite_y: (nth(sprite-position($map, $sprite), 2) * $scale);
+    $sprite_file: sprite-file($map, $sprite);
+    $sprite_width: (image-width($sprite_file)*$scale);
+    $sprite_height: (image-height($sprite_file)*$scale);
+
+    background-image: $map_url;
+    background-position: floor($sprite_x/$dpi) floor($sprite_y/$dpi);
+    background-size: floor($map_width/$dpi) floor($map_height/$dpi);
+    width: floor($sprite_width/$dpi);
+    height: floor($sprite_height/$dpi);
+
     background-repeat: no-repeat;
     overflow: hidden;
     display: block;
-    height: image-height(sprite-file($icons, $sprite));
-    width: image-width(sprite-file($icons, $sprite));
+}
+
+//Sprite mixin, works perfectly with standard defines
+@mixin use-sprite($sprite, $size: 1) {
+    @include __use-sprite($icons, $sprite, $size);
 
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-        background-image: sprite-url($icons-2x);
-        background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
-        background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
-        height: image-height(sprite-file($icons-2x, $sprite)) / 2;
-        width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+        @include __use-sprite($icons-2x, $sprite, $size, $dpi: 2);
     }
 }
