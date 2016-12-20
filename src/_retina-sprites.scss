@@ -12,8 +12,8 @@
  */
 
 //first we'll define the folders where the sprites are and their layouts
-$icons: sprite-map("icons/*.png", $layout: smart);
-$icons-2x: sprite-map("icons-2x/*.png", $layout: smart);
+$icons: sprite-map("icons/*.png", $layout: smart) !default;
+$icons-2x: sprite-map("icons-2x/*.png", $layout: smart) !default;
 
 @mixin __use-sprite($map, $sprite, $scale: 1, $dpi: 1) {
     $map_url: sprite-url($map);
