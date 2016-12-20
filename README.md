@@ -21,7 +21,7 @@ First thing you'll need to do is to download the mixins and put them where your 
 
 3. Save your sprite images in the folders. The pixel-ratio 1 variant in `./icons` and the retina variant in `./icons-2x`. Make sure there have the same filename.
 
-4. Use the sprite in your SASS/SCSS using: `@include use-sprite(<sprite-name>)`. (Note the missing .png, this is not needed.)
+4. Use the sprite in your SASS/SCSS using: `@include use-sprite(<sprite-name>, <scale>)`. (Note the missing .png, this is not needed.)
 
 It's really that easy!
 
@@ -63,6 +63,15 @@ CSS:
 		height: 25px;
 		width: 25px;
 	}
+}
+```
+
+You can also scale image:
+
+SCSS:
+```scss
+.sprite2 {
+    @include use-sprite("sprite3", 1.5);
 }
 ```
 
