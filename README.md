@@ -5,12 +5,12 @@ Allows you to use sprites in Compass with added retina variants. Works just like
 
 Take a look at the example to see the results.
 
-##The problem:
+## The problem:
 You want your site to serve retina images to retina displays, but not to non-retina ones. This mixin / solution will make it very easy for you to use sprites and let Compass generate the mappings of the two different sizes.
 
 Since we have to develop sites that serve retina images and background-images our sprites and background-image approaches might get a bit cluttered in our CSS. Using just one call, this mixin will know which image has to be served to the browser and will also resize it to show as if it was in your normal image dimentions.
 
-##How to use:
+## How to use:
 
 First thing you'll need to do is to download the mixins and put them where your scss / sass files are located. Notice the underscore at the start of the filenames, this will prevent Compass from compiling these files to CSS.
 
@@ -25,11 +25,11 @@ First thing you'll need to do is to download the mixins and put them where your 
 
 It's really that easy!
 
-##Or with Bower
+## Or with Bower
 
 `bower install Retina-sprites-for-Compass`
 
-##What it does:
+## What it does:
 
 Compass will create a nice sprite image from the images you put in the folders. Make sure you only use PNG files for the best result.
 
@@ -75,11 +75,11 @@ SCSS:
 }
 ```
 
-##Bonus: retina background-images
+## Bonus: retina background-images
 
 With the same principles of the sprites I created a mixin that sets the background-image and it's retina version.
 
-##How to use:
+## How to use:
 
 1. Include the mixin in your SASS/SCSS file using:<br/>
 `@import "retina-background-image";`
