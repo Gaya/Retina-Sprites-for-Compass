@@ -1,0 +1,9 @@
+
+$sprite-icons-class-prefix: 'sprite-icon_' !default;
+
+
+@each $icon in $sprite-icons-names {
+	#{$sprite-icons-class-prefix}#{$icon} {
+		@include use-sprite($icon);
+	}
+}
