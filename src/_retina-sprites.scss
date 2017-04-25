@@ -14,8 +14,10 @@
 //first we'll define the folders where the sprites are and their layouts
 $sprite-icons-folder: "icons/*.png" !default;
 $sprite-icons-2x-folder: "icons-2x/*.png" !default;
-$icons: sprite-map($sprite-icons-folder, $layout: smart);
-$icons-2x: sprite-map($sprite-icons-2x-folder, $layout: smart);
+$sprite-icons: sprite-map($sprite-icons-folder, $layout: smart);
+$sprite-icons-2x: sprite-map($sprite-icons-2x-folder, $layout: smart);
+$sprite-icons-names: sprite-names($sprite-icons);
+$sprite-icons-2x-names: sprite-names($sprite-icons-2x);
 
 @mixin __use-sprite($map, $sprite, $scale: 1, $dpi: 1) {
     $map_url: sprite-url($map);
@@ -41,9 +43,9 @@ $icons-2x: sprite-map($sprite-icons-2x-folder, $layout: smart);
 
 //Sprite mixin, works perfectly with standard defines
 @mixin use-sprite($sprite, $size: 1) {
-    @include __use-sprite($icons, $sprite, $size);
+    @include __use-sprite($sprite-icons, $sprite, $size);
 
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-        @include __use-sprite($icons-2x, $sprite, $size, $dpi: 2);
+        @include __use-sprite($sprite-icons-2x, $sprite, $size, $dpi: 2);
     }
 }
