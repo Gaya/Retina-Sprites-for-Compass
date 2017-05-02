@@ -75,6 +75,25 @@ SCSS:
 }
 ```
 
+## Automatic stylesheet generator
+You may include whole icons set from the folder automatically so when you add new icons to the icons source folder and run styles build it will generate corresponding styles automatically.  
+For this purpose you may use `_sprite-icons-enum.scss`, that contains `@each` function.
+
+// style.scss
+```scss
+// you may set custom path for icons folder
+$sprite-icons-folder: 'images/icons/my-icons/*.png';
+$sprite-icons-2x-folder: 'images/icons/my-icons/*.png';
+
+@import 'Retina-Sprites-for-Compass/src/retina-sprites';
+// import _sprite-icons-enum.scss file after _retina-sprites.scss
+// so it will generate stylesheet with whole set of icons
+
+// set icon prefix (icon_ by default)
+$sprite-icons-class-prefix: 'my-icon_';
+@import 'Retina-Sprites-for-Compass/src/sprite-icons-enum';
+```
+
 ## Bonus: retina background-images
 
 With the same principles of the sprites I created a mixin that sets the background-image and it's retina version.
