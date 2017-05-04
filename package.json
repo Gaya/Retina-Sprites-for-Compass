@@ -1,0 +1,24 @@
+{
+  "name": "retina-sprites-for-compass",
+  "version": "0.1.3",
+  "description": "Allow to use sprites in retina with Compass.",
+  "main": "src/_retina-sprites.scss",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaya/Retina-Sprites-for-Compass.git"
+  },
+  "keywords": [
+    "Sass",
+    "Retina",
+    "Sprite"
+  ],
+  "author": "Gaya Kessler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gaya/Retina-Sprites-for-Compass/issues"
+  },
+  "homepage": "https://github.com/Gaya/Retina-Sprites-for-Compass#readme"
+}
